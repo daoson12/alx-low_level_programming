@@ -4,7 +4,7 @@
 *
 *Return: always 0
 */
-int main(void)
+int _putchar(char c)
 {
 	write(1,"_putchar\n", 57);
 	return (0);
