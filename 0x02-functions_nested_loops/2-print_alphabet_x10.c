@@ -1,8 +1,8 @@
 #include <main.h>
 /**
- * print_alphabet_x10 - prints alphabet 10 times
+ * main - check the code
  *
- * Return: always 0;
+ * Return: Always 0;
  *
  */
 void print_alphabet_x10(void)
@@ -18,4 +18,5 @@ void print_alphabet_x10(void)
 		}
 		_putchar('\n');
 	}
+	return (0);
 }
