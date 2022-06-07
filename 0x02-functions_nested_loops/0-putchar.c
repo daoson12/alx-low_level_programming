@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	write(1,"_putchar\n",57);
+	write("_putchar\n");
 	return (0);
 }
