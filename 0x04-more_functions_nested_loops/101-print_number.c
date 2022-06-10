@@ -1,26 +1,34 @@
 #include <stdio.h>
+include "main.h"
 
 /**
- * main - prime numbers
- *
- * Return: 0
- */
+* print_triangle - Prints a triangle
+* @size: size of triangle
+*
+*/
 
-int main(void)
+void print_triangle(int size)
 {
-	long num = 612852475143;
-	long divisor = 2;
-	long larg_prim = 0;
+	int i, j, k;
 
-	while (num != 1)
+	if (size <= 0)
 	{
-		if (num % divisor == 0)
-		{
-			num = num / divisor;
-			larg_prim = divisor;
-		}
-		divisor += 1;
+		_putchar('\n');
 	}
-	printf("%ld\n", larg_prim);
-	return (0);
+	else
+	{
+		for (i = 1; i <= size; i++)
+		{
+			for (j = size; j > i; j--)
+			{
+				_putchar(' ');
+			}
+
+			for (k = 1; k <= j; k++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
 }
