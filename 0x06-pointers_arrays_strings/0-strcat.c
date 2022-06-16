@@ -1,22 +1,26 @@
-#include "main.h"
-#include <stdio.h>
-
+#include "MAIN.h"
 /**
- * main - check the code
+ * _strcat - concats two arrays
  *
- * Return: Always 0.
+ * @dest: destination of concat
+ * @src: source array to concat
+ *
+ * Return: char value
  */
-int main(void)
+char *_strcat(char *dest, char *src)
 {
-    char s1[98] = "Hello ";
-    char s2[] = "World!\n";
-    char *ptr;
+	int i;
+	int j;
 
-    printf("%s\n", s1);
-    printf("%s", s2);
-    ptr = _strcat(s1, s2);
-    printf("%s", s1);
-    printf("%s", s2);
-    printf("%s", ptr);
-    return (0);
+	for (j = 0; dest[j] != '\0'; j++)
+	{}
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[j + i] = src[i];
+	}
+	dest[j + i] = '\0';
+
+	return (dest);
+
 }
