@@ -1,12 +1,10 @@
-#include "main.h"
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strchr - locates character in string
+ * @s: string to locate char
+ * @c: character to find
+ * Return: character value
  */
-
 char *_strchr(char *s, char c)
 {
 	int i;
