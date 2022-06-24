@@ -7,7 +7,7 @@
  *Return:0-success, non-zero-fail.
  */
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 	int sum;
 
