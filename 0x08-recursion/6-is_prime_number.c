@@ -7,26 +7,24 @@ include "main.h"
  * Return: 0 or 1
  */
 
-int check_prime(int n, int resp);
+int helper(int i, int n)
+{
+	if (n % i == 0 && n != i)
+		return (0);
+	if (n % i != 0 && i < n)
+		return (helper(i + 1, n));
+	return (1);
+}
+/**
+ * is_prime_number - is prime or not
+ * @n: integer to compare
+ * Return: boolean
+ */
 int is_prime_number(int n)
 {
-return (check_prime(n, 2));
-}
+	int i = 2;
 
-/**
- * check_prime - check all number < n if they can divide it
- * @n: int
- * @resp: int
- * Return: int
- */
-
-int check_prime(int n, int resp)
-{
-
-if (resp >= n && n > 1)
-	return (1);
-else if (n % resp == 0 || n <= 1)
-	return (0);
-else
-	return (check_prime(n, resp + 1));
+	if (n < 2)
+		return (0);
+	return (helper(i, n));
 }
